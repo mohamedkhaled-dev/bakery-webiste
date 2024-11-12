@@ -1,0 +1,537 @@
+/* ====== General ====== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #fff;
+  color: #686868;
+  font-family: "Alegreya Sans", sans-serif;
+}
+
+img,
+picture,
+iframe {
+  display: block;
+  width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Alegreya", serif;
+}
+
+p {
+  font-size: 17px;
+  line-height: 1.86em;
+  margin-bottom: 25px;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.btn {
+  cursor: pointer;
+  padding: 20px 26px;
+  margin-bottom: 12px;
+  border: 2px solid transparent;
+  font-size: 16px;
+  font-weight: 700;
+  border-radius: 4px;
+  transition: all 0.4s ease-in-out;
+}
+
+/* ====== Clearfix ====== */
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* ====== Navbar ====== */
+.navbar {
+  background-color: transparent;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+}
+
+.container {
+  width: 65%;
+  margin-inline: auto;
+  padding-top: 10px;
+}
+
+.navbar-left {
+  width: 200px;
+  float: left;
+}
+
+.navbar-right {
+  float: right;
+}
+
+.navbar-menu .nav-item {
+  float: left;
+  font-family: "Alegreya", serif;
+}
+
+.nav-item .nav-link {
+  display: block;
+  padding: 18px;
+  color: #fff;
+  font-size: 18px;
+  transition: color 0.5s ease-in-out;
+}
+
+.nav-link:hover {
+  color: #e2785d;
+}
+
+.dropdown-toggle {
+  position: relative;
+}
+
+.dropdown {
+  position: absolute;
+  background-color: #423d37;
+  min-width: 200px;
+  opacity: 0;
+  transition: all 0.2s ease-in-out;
+}
+
+.dropdown li {
+  padding: 10px;
+  transition: all 0.4s ease;
+  color: #cccccc;
+}
+
+.dropdown li:hover {
+  background-color: #ae9768;
+  color: #fff;
+}
+
+.dropdown-toggle:hover .dropdown {
+  opacity: 100%;
+}
+
+/* ====== Header ====== */
+.header {
+  background-image: url(../images/drew-coffman-1872.jpg);
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  background-color: lightblue;
+  min-height: 100vh;
+}
+
+.header .container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.header .inner {
+  width: 700px;
+  text-align: center;
+  margin-inline: auto;
+  margin-top: 50px;
+}
+
+.header .inner h1 {
+  color: #fff;
+  font-size: 76px;
+  margin-bottom: 18px;
+}
+
+.header .inner p {
+  color: #fff;
+  font-size: 22px;
+  margin-bottom: 5px;
+}
+
+.header .inner .subtitle {
+  font-size: 24px;
+  margin-block: 10px 20px;
+}
+
+.btn-group {
+  margin-top: 30px;
+}
+
+.btn-group .learn-more {
+  background-color: #8e7754;
+  color: #fff;
+}
+
+.btn-group .contact-us {
+  background-color: transparent;
+  margin-left: 12px;
+  border-color: #fff;
+  color: #fff;
+}
+
+.learn-more:hover,
+.contact-us:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+.scroll-btn {
+  display: block;
+  background-color: transparent;
+  color: #fff;
+  width: 32px;
+  height: 50px;
+  border-radius: 24px;
+  position: relative;
+  border: 2px solid #ffffffb3;
+  position: absolute;
+  bottom: -50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.scroll-btn .mouse-dot {
+  height: 8px;
+  width: 8px;
+  background: #ffffffe6;
+  border-radius: 10px;
+  position: absolute;
+  left: 10px;
+  top: 6px;
+  animation: mouse-animation 2.5s infinite linear;
+}
+
+@keyframes mouse-animation {
+  0% {
+    opacity: 1;
+    top: 6px;
+  }
+  35% {
+    opacity: 0;
+    top: 20px;
+  }
+  100% {
+    opacity: 0;
+    top: 6px;
+  }
+}
+
+/* ====== About ====== */
+.about {
+  padding-block: 90px;
+}
+
+.about .img-container {
+  width: 50%;
+  float: left;
+  padding-inline: 15px 40px;
+}
+
+.about .text-content {
+  width: 50%;
+  float: right;
+  padding-block: 20px;
+  padding-inline: 40px 15px;
+}
+
+.about .text-content h2 {
+  color: #303030;
+  font-size: 32px;
+  font-weight: 400;
+  margin-block: 25px;
+}
+
+.icon-list li {
+  padding-block: 10px;
+  margin-bottom: 2px;
+}
+
+.icon-list li i {
+  border: 1px solid #00000026;
+  color: #8e7754;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  line-height: 44px;
+  font-size: 20px;
+  text-align: center;
+  margin-right: 10px;
+}
+
+/* ====== Location ====== */
+.location {
+  background-color: #f8f8f8;
+  padding-block: 90px;
+}
+
+.location .img-container {
+  width: 50%;
+  float: right;
+  padding-inline: 40px 15px;
+}
+
+.location .text-content {
+  width: 50%;
+  float: left;
+  padding-block: 20px;
+  padding-inline: 15px 40px;
+}
+
+.location .text-content h2 {
+  color: #303030;
+  font-size: 32px;
+  font-weight: 400;
+  margin-block: 25px;
+}
+
+/* ====== Baking ====== */
+.baking {
+  text-align: center;
+  padding-block: 90px;
+}
+
+.baking .text-content h2 {
+  color: #303030;
+  font-size: 32px;
+  font-weight: 400;
+  margin-block: 25px;
+  text-align: center;
+}
+
+.gallery .card {
+  width: 33.33%;
+  float: left;
+  padding-inline: 20px;
+}
+
+.gallery .card h4 {
+  color: #303030;
+  line-height: 1.38em;
+  font-size: 22px;
+  font-weight: 400;
+  margin-block: 25px;
+  text-align: center;
+}
+
+/* ====== About ====== */
+.contact {
+  background-color: #f8f8f8;
+  padding-block: 90px;
+}
+
+.contact .iframe-container {
+  width: 50%;
+  height: 600px;
+  float: right;
+  padding-inline: 40px 15px;
+}
+
+.iframe-container iframe {
+  height: 100%;
+  border: none;
+}
+
+.contact .text-content {
+  width: 50%;
+  float: left;
+  padding-block: 20px;
+  padding-inline: 15px 40px;
+}
+
+.contact .text-content h2 {
+  color: #303030;
+  font-size: 32px;
+  font-weight: 400;
+  margin-block: 25px;
+}
+
+.contact .icon-list li i {
+  background-color: #8e7754;
+  border: 1px solid #8e7754;
+  color: #fff;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  line-height: 36px;
+  font-size: 18px;
+  text-align: center;
+  margin-right: 10px;
+}
+
+/* ====== Footer ====== */
+.footer-top {
+  background-color: #403d38;
+  padding-block: 60px;
+}
+
+.footer-top .footer-card {
+  float: left;
+  width: 25%;
+  padding-inline: 15px;
+}
+.footer-card h4 {
+  color: #fff;
+  font-weight: 400;
+  font-size: 18px;
+  margin-bottom: 25px;
+}
+
+.footer-card p,
+.footer-card li,
+.footer-card a {
+  color: #969696;
+  font-size: 16px;
+}
+
+.footer-card li {
+  border-bottom: 1px solid #ffffff0d;
+  margin-bottom: 15px;
+  padding-bottom: 15px;
+}
+
+.footer-card li i {
+  padding-right: 8px;
+  font-size: 10px;
+}
+
+.footer-card a {
+  transition: all 0.4s ease-in-out;
+}
+
+.footer-card a:hover {
+  color: #e0e0e0;
+}
+
+.contact-list {
+  position: relative;
+}
+
+.contact-list .overlay {
+  position: absolute;
+  inset: 0;
+  background-image: url(../images/contact-details-map.png);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  opacity: 0.11;
+}
+
+.contact-list li {
+  position: relative;
+  z-index: 99;
+}
+
+.contact-list .location-text {
+  position: relative;
+  top: -20px;
+  padding-left: 30px;
+  margin-bottom: 0;
+}
+
+.contact-list li i {
+  font-size: 16px;
+}
+
+.footer-bottom {
+  background-color: #353330;
+  padding-block: 60px;
+  text-align: center;
+}
+
+.footer-bottom .img-container {
+  width: 350px;
+  margin-inline: auto;
+}
+
+.footer-bottom p {
+  margin-block: 25px 10px;
+  font-size: 15px;
+}
+
+.footer-bottom .social-icons {
+  margin-top: 15px;
+  padding-top: 8px;
+  text-align: center;
+  width: fit-content;
+  margin-inline: auto;
+}
+
+.footer-bottom .social-icons li {
+  float: left;
+}
+
+.footer-bottom .social-icons li a {
+  background-color: #484540;
+  color: #8c8a86;
+  border-radius: 50%;
+  display: block;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  font-size: 20px;
+  text-align: center;
+  margin-right: 8px;
+  margin-bottom: 8px;
+  transition: all 0.3s ease-in-out;
+}
+
+.footer-bottom .social-icons li i {
+  font-size: 20px;
+}
+
+.footer-bottom .social-icons .facebook:hover a {
+  background-color: #3b5997;
+  color: #fff;
+}
+.footer-bottom .social-icons .google:hover a {
+  background-color: #dd4b39;
+  color: #fff;
+}
+.footer-bottom .social-icons .linkedin:hover a {
+  background-color: #007bb5;
+  color: #fff;
+}
+.footer-bottom .social-icons .twitter:hover a {
+  background-color: #00aced;
+  color: #fff;
+}
+
+/* ====== Scroll To Top ====== */
+.scrollup {
+  background-color: #00000099;
+  display: block;
+  height: 40px;
+  width: 40px;
+  border: 2px solid #ffffffcc;
+  border-radius: 50%;
+  color: #fff;
+  position: fixed;
+  bottom: 15px;
+  right: 15px;
+  font-size: 16px;
+  line-height: 40px;
+  text-align: center;
+  z-index: 9999;
+  opacity: 0.5;
+}
